@@ -1,0 +1,35 @@
+CREATE TABLE `comments` (
+  `id_comments` int(11) NOT NULL,
+  `comment` text NOT NULL,
+  `postId` int(11) NOT NULL,
+   PRIMARY KEY (`id_comments`)
+);
+
+
+
+INSERT INTO `comments` (`id_comments`, `comment`, `postId`) VALUES
+(4, 'Ah masa??', 1),
+(5, 'Serius?', 1),
+(6, 'Bonbin mana?', 1);
+
+
+
+CREATE TABLE `posts` (
+  `id_posts` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `createdBy` int(11) NOT NULL,
+  PRIMARY KEY (`id_posts`)
+);
+
+
+INSERT INTO `posts` (`id_posts`, `title`, `content`, `createdBy`) VALUES ('1', 'wanita itu diserang kadal saat mengunjungi kebun binatang', 'seorang wanita jalan - jalan di Kebun Binatang Afrika. Terlihat ia sedang memberi makan se-ekor burung gagak di dalam kandang. \\r\\nKadal tersebut mencium bau wanginya wanita itu. Tanpa sadar di belakang wanita itu ada segerombolan kadal yang kelaparan, kadal tersebut mulai menyerang wanita itu.\\r\\nAkhirnya wanita itu mati di terkam kadal. Burung gagak yang kelaparan, ikut menyantapi daging wanita itu.', '1');
+
+
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL,
+  `username` varchar(32) NOT NULL,
+ PRIMARY KEY (`id_user`)
+);
+
+INSERT INTO `users` (`id_user`, `username`) VALUES (1, 'Hesa Suryana');
